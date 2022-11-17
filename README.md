@@ -1,4 +1,4 @@
-# Shielding Federated Learning: Robust Aggregation with Adaptive Client Selection
+# [IJCAI 2022] Shielding Federated Learning: Robust Aggregation with Adaptive Client Selection
 This repository comprises of implementation of MAB-RFL (https://www.ijcai.org/proceedings/2022/0106.pdf) under label flipping attack on CIFAR-10.
 
 ## Abstract
