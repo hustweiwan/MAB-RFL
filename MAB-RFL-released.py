@@ -186,7 +186,7 @@ def LIE(clients,selectedId):
         if clients[i].byzantine==False:
             benignId.append(i)
     s = int(client_num/2+1)-f
-    z = norm.ppf((client_num-f-s)/client_num-f)
+    z = norm.ppf((client_num-f-s)/(client_num-f))
     mean = np.mean([clients[i].update for i in benignId],axis=0)
     std = getSTD([clients[i].update for i in benignId])
     bad_update = mean-z*std
