@@ -24,7 +24,7 @@ client_num = 50 #用户总数
 global_epoch = 100  #全局迭代次数
 f = 15   #攻击者数目
 miu = 0.1
-c_max = 0.3
+c_max = 0.8
 c_min = 0.1
 alpha = 0
 
