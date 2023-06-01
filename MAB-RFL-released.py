@@ -24,7 +24,7 @@ client_num = 50 #用户总数
 global_epoch = 100  #全局迭代次数
 f = 15   #攻击者数目
 miu = 0.1
-c_max = 0.8
+c_max = 0.3
 c_min = 0.1
 alpha = 0
 
@@ -217,7 +217,7 @@ def MAB_FL(clients, selectedId, epoch):
     edges = []
     for i in range(len(selectedId)):
         for j in range(i+1,len(selectedId)):
-            if Cos_Similarity(clients[selectedId[i]].momentum,clients[selectedId[j]].momentum,True)>max(c_max*np.exp(-epoch),c_min):
+            if Cos_Similarity(clients[selectedId[i]].momentum,clients[selectedId[j]].momentum,True)>max(c_max*np.exp(-epoch/20),c_min):
                 edges.append((selectedId[i],selectedId[j]))
     G.add_nodes_from(selectedId)
     G.add_edges_from(edges)
